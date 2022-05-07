@@ -37,9 +37,53 @@ reference : https://www.digitalocean.com/community/tutorials/how-to-serve-flask-
 sudo systemctl start portfolio
 sudo systemctl enable portfolio
 sudo systemctl status portfolio
+sudo systemctl restart portfolio
 
 
 
 
+You might need to install nginx manually after installing nginx.
+1. if directories are not present then create
+```
+mkdir -p /etc/nginx/sites-enabled
+mkdir -p /etc/nginx/sites-available
+```
+2. add following line to nginx config
+locating config file path
+```
+nginx -t
+```
+```
+vi /etc/nginx/nginx.conf
+include /etc/nginx/sites-enabled/*.conf;
+```
 
-You might need to install nginx manually
+3. add following code to /etc/nginx/sites-available/portfolio.conf
+```
+server {
+    listen 5000;
+    server_name hotstar;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/ec2-user/python_projetcs/portfolio.sock;
+    }
+}
+```
+
+4. 
+```
+sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
+```
+
+5. check syntax is ok
+```
+cd /etc/nginx/sites-available
+sudo nginx -t
+```
+
+6. Start nginx
+```
+sudo systemctl restart nginx
+```
+
