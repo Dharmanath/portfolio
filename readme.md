@@ -17,3 +17,29 @@ yum install python-devel
 pip install uwsgi
 uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
 
+The above command will run the wsgi but we might want to run this as soon as system boots hence:
+sudo vi /etc/systemd/system/portfolio.service
+and add this 
+```
+[Unit]
+Description=uWSGI instance to serve portfolio
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ec2-user/python_projetcs/portfolio
+Environment="PATH=/home/ec2-user/python_projetcs/portfolio/venv/bin"
+ExecStart=/home/ec2-user/python_projetcs/portfolio/venv/bin/uwsgi --ini portfolio.ini
+
+[Install]
+WantedBy=multi-user.target
+```
+reference : https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
+sudo systemctl start portfolio
+sudo systemctl enable portfolio
+sudo systemctl status portfolio
+
+
+
+
+
+You might need to install nginx manually
