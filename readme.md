@@ -58,10 +58,10 @@ vi /etc/nginx/nginx.conf
 include /etc/nginx/sites-enabled/*.conf;
 ```
 
-3. add following code to /etc/nginx/sites-available/portfolio.conf
+3. add following code to /etc/nginx/nginx.conf
 ```
 server {
-    listen 5000;
+    listen 80;
     server_name hotstar;
 
     location / {
@@ -87,3 +87,42 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+
+
+
+
+[might not be relevant to all]
+TO configure AWS for nameserver
+https://www.youtube.com/watch?v=hRSj2n-XKGM
+
+Configuring https:
+Install certbot 
+```
+sudo yum install certbot-apache
+sudo yum install certbot
+sudo amazon-linux-extras install epel
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install python-certbot-nginx
+udo certbot certonly --nginx
+```
+Make sure port 443 is open
+
+Reference: https://adamtheautomator.com/nginx-to-redirect-http-to-https/
+
+
+ add following code to /etc/nginx/nginx.conf
+```
+server {
+    listen 443;
+    ssl on;
+    server_name hotstar.ai;
+    ssl_certificate /etc/letsencrypt/live/hotstar.ai/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/hotstar.ai/privkey.pem;
+
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/ec2-user/python_projetcs/portfolio/portfolio.sock;
+    }
+}         
+```
