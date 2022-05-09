@@ -71,18 +71,7 @@ server {
 }
 ```
 
-4. 
-```
-sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
-```
-
-5. check syntax is ok
-```
-cd /etc/nginx/sites-available
-sudo nginx -t
-```
-
-6. Start nginx
+4. Start nginx
 ```
 sudo systemctl restart nginx
 ```
