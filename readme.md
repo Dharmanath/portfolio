@@ -71,7 +71,7 @@ server {
 }
 ```
 
-4. 
+~~4. 
 ```
 sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
 ```
@@ -80,7 +80,7 @@ sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
 ```
 cd /etc/nginx/sites-available
 sudo nginx -t
-```
+```~~
 
 6. Start nginx
 ```
@@ -103,7 +103,7 @@ sudo yum install certbot
 sudo amazon-linux-extras install epel
 sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum install python-certbot-nginx
-udo certbot certonly --nginx
+sudo certbot certonly --nginx
 ```
 Make sure port 443 is open
 
