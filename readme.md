@@ -66,7 +66,7 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/home/ec2-user/python_projetcs/portfolio.sock;
+        uwsgi_pass unix:/home/ec2-user/python_projetcs/portfolio/portfolio.sock;
     }
 }
 ```
