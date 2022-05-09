@@ -71,7 +71,7 @@ server {
 }
 ```
 
-~~4. 
+4. 
 ```
 sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
 ```
@@ -80,7 +80,7 @@ sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
 ```
 cd /etc/nginx/sites-available
 sudo nginx -t
-```~~
+```
 
 6. Start nginx
 ```
