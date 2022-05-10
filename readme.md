@@ -115,3 +115,9 @@ server {
     }
 }         
 ```
+
+
+Get ssl certificates for new domains
+```
+sudo certbot certonly -d domain_name.com
+```
