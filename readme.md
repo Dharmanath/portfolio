@@ -38,6 +38,7 @@ sudo systemctl start portfolio
 sudo systemctl enable portfolio
 sudo systemctl status portfolio
 sudo systemctl restart portfolio
+sudo systemctl stop portfolio
 
 
 
@@ -74,6 +75,8 @@ server {
 4. Start nginx
 ```
 sudo systemctl restart nginx
+sudo systemctl status nginx
+sudo systemctl stop nginx
 ```
 
 

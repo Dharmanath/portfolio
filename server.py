@@ -10,7 +10,19 @@ def index():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('ec_projects.html')
+
+@app.route('/ec_projects')
+def ec_projects():
+    return render_template('ec_projects.html')
+
+@app.route('/js_projects')
+def js_projects():
+    return render_template('js_projects.html')
+
+@app.route('/re_projects')
+def re_projects():
+    return render_template('re_projects.html')
 
 @app.route('/resume')
 def resume():

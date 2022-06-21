@@ -42,9 +42,9 @@
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
 	          <li class="nav-item"><a class="nav-link"><span>Projects
               <div class="dropdown-content">
-                <a href="{{ url_for('projects') }}#projects-section">Ecommerce Projects</a>
-                <a href="{{ url_for('projects') }}#projects-section">Job-Sector Projects</a>
-                <a href="{{ url_for('projects') }}#projects-section">Real Estate Projects</a>
+                <a href="{{ url_for('ec_projects') }}">Ecommerce Projects</a>
+                <a href="{{ url_for('js_projects') }}">Job-Sector Projects</a>
+                <a href="{{ url_for('re_projects') }}">Real Estate Projects</a>
               </div>
             </span></a></li>
               <li class="nav-item"><a href="{{ url_for('resume') }}" class="nav-link"><span>Résumé</span></a></li>
@@ -315,10 +315,10 @@
     		<div class="row">
     			<div class="col-md-8">
                     <div class="project img ftco-animate img-2 d-flex justify-content-center align-items-center" style="background-image: url(personal_images/project-1.jpg);">
-                        <a href="{{ url_for('projects') }}">
+                        <a href="{{ url_for('ec_projects') }}">
                         <div class="overlay"></div></a>
                         <div class="text text-center p-4">
-                            <h3><a href="{{ url_for('projects') }}">Question generation &amp; deduplication</a></h3>
+                            <h3><a href="{{ url_for('ec_projects') }}">Question generation &amp; deduplication</a></h3>
                             <span>Natural Language Processing</span>
                         </div>
                     </div>
@@ -329,9 +329,9 @@
 
                         <div class="col-md-12">
                             <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(personal_images/project-2.jpg);">
-                                <a href="{{ url_for('projects') }}"><div class="overlay"></div></a>
+                                <a href="{{ url_for('ec_projects') }}"><div class="overlay"></div></a>
                                 <div class="text text-center p-4">
-                                    <h3><a href="{{ url_for('projects') }}">Automated attribute detection</a></h3>
+                                    <h3><a href="{{ url_for('ec_projects') }}">Automated attribute detection</a></h3>
                                     <span>Natural Language Processing</span>
                                 </div>
                             </div>
@@ -339,9 +339,9 @@
 
                         <div class="col-md-12">
                             <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(personal_images/project-3.jpg);">
-                                <a href="{{ url_for('projects') }}"><div class="overlay"></div></a>
+                                <a href="{{ url_for('ec_projects') }}"><div class="overlay"></div></a>
                                 <div class="text text-center p-4">
-                                    <h3><a href="{{ url_for('projects') }}">Information retrieval &amp; Knowledge graphs </a></h3>
+                                    <h3><a href="{{ url_for('ec_projects') }}">Information retrieval &amp; Knowledge graphs </a></h3>
                                     <span>Natural Language Processing</span>
                                 </div>
                             </div>
@@ -352,9 +352,9 @@
 
                 <div class="col-md-4">
                     <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(personal_images/project-4.jpg);">
-                        <a href="{{ url_for('projects') }}"><div class="overlay"></div></a>
+                        <a href="{{ url_for('ec_projects') }}"><div class="overlay"></div></a>
                         <div class="text text-center p-4">
-                            <h3><a href="{{ url_for('projects') }}">Hashtag generation</a></h3>
+                            <h3><a href="{{ url_for('ec_projects') }}">Hashtag generation</a></h3>
                             <span>Natural Language Processing</span>
                         </div>
                     </div>
@@ -363,9 +363,9 @@
 
                 <div class="col-md-8">
                     <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(personal_images/project-5.jpg);">
-                        <a href="{{ url_for('projects') }}"><div class="overlay"></div></a>
+                        <a href="{{ url_for('ec_projects') }}"><div class="overlay"></div></a>
                         <div class="text text-center p-4">
-                            <h3><a href="{{ url_for('projects') }}">googleOnTap app, forced alignment, speech to text, deep learning with tensorflow, pytorch etc.</a></h3>
+                            <h3><a href="{{ url_for('ec_projects') }}">googleOnTap app, forced alignment, speech to text, deep learning with tensorflow, pytorch etc.</a></h3>
                             <span>Other verticals</span>
                         </div>
                     </div>
