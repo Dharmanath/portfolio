@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="personal_css/flaticon.css">
     <link rel="stylesheet" href="personal_css/icomoon.css">
     <link rel="stylesheet" href="personal_css/style.css">
+    <link rel="stylesheet" href="personal_css/drop_down.css">
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -34,12 +35,18 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="{{ url_for('index') }}#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="{{ url_for('index') }}#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="{{ url_for('index') }}#skills-section" class="nav-link"><span>Skills</span></a></li>
-	          <li class="nav-item"><a href="{{ url_for('index') }}#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a class="nav-link"><span> Projects
+              <div class="dropdown-content">
+                <a href="{{ url_for('projects') }}#projects-section">Ecommerce Projects</a>
+                <a href="{{ url_for('projects') }}#projects-section">Job-Sector Projects</a>
+                <a href="{{ url_for('projects') }}#projects-section">Real Estate Projects</a>
+              </div>
+            </span></a></li>
               <li class="nav-item"><a href="{{ url_for('resume') }}" class="nav-link"><span>Résumé</span></a></li>
 	          <li class="nav-item"><a href="{{ url_for('index') }}#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
@@ -60,6 +67,13 @@
     </section>
 
 
+    <!-- <section class="ftco-section" style="padding-top: 0%; padding-bottom: 0%;"> <div class="container_card"> <div class="card"> <div class="box"> <div class="content"> <h2>01</h2> 
+      <h3>Ecommerce Projects</h3> 
+      <p>Attribute identification, Aspect based sentiment analysis, Passage ranking, Question deduplication, Text summarization etc</p> <a href="#ecommerce">Read More</a> </div> </div> </div> <div class="card"> 
+        <div class="box"> <div class="content"> <h2>02</h2> <h3>Job Sector Projetcs</h3> <p>Skill set extraction, Candidate behaviour analysis, Job title normalisation, Experience extraction, Candidate Profile ranking etc..</p> <a href="#jobsector">Read More</a> 
+        </div> </div> </div> <div class="card"> <div class="box"> <div class="content"> <h2>03</h2> <h3>Real Estate Sector</h3> <p>Search Suggest Ranker for real estate, Document Intelligence and Ranking, Active Learning, Real Estate Language model etc.. </p> <a href="#">Read More</a> </div> </div> </div> </div> 
+    </section> -->
+
     <section class="ftco-section bg-light", id="project-2" style="margin-bottom: 0%; padding-bottom: 0%; padding-top: 1%;">
       <div class="container">
         <div class="row">
@@ -77,10 +91,7 @@
     </section> <!-- .section -->
 
 
-    <section class="ftco-section" style="padding-top: 0%; padding-bottom: 0%;"> <div class="container_card"> <div class="card"> <div class="box"> <div class="content"> <h2>01</h2> 
-      <h3>Ecommerce Projects</h3> 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> <a href="#ecommerce">Read More</a> </div> </div> </div> <div class="card"> 
-        <div class="box"> <div class="content"> <h2>02</h2> <h3>Job Sector Projetcs</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> <a href="#jobsector">Read More</a> </div> </div> </div> <div class="card"> <div class="box"> <div class="content"> <h2>03</h2> <h3>Real Estate Sector</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> <a href="#">Read More</a> </div> </div> </div> </div> </section>
+
 
     <div id="ecommerce"></div>
     <section class="ftco-section bg-light", id="project-2">
@@ -546,7 +557,7 @@
 
     <div id="jobsector"></div>
 
-    <section class="ftco-section", id="project-4">
+    <!-- <section class="ftco-section", id="project-4">
       <div class="container">
         <div class="row">
           <div class="col-lg-10  ftco-animate">
@@ -576,10 +587,11 @@
                 </p>
               </div>
             </div>
-          </div> <!-- Project - 1 -->
+          </div> 
         </div>
       </div>
-    </section> <!-- .section -->
+    </section>  -->
+    <!-- .section -->
 
 
     <section class="ftco-section", id="coming">
