@@ -32,12 +32,18 @@
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
             <ul class="navbar-nav nav ml-auto">
               <li class="nav-item"><a href="{{ url_for('index') }}#home-section" class="nav-link"><span>Home</span></a></li>
               <li class="nav-item"><a href="{{ url_for('index') }}#about-section" class="nav-link"><span>About</span></a></li>
               <li class="nav-item"><a href="{{ url_for('index') }}#skills-section" class="nav-link"><span>Skills</span></a></li>
-              <li class="nav-item"><a href="{{ url_for('index') }}#projects-section" class="nav-link"><span>Projects</span></a></li>
+              <li class="nav-item"><a class="nav-link"><span>Projects
+                <div class="dropdown-content">
+                  <a href="{{ url_for('projects') }}#projects-section">Ecommerce Projects</a>
+                  <a href="{{ url_for('projects') }}#projects-section">Job-Sector Projects</a>
+                  <a href="{{ url_for('projects') }}#projects-section">Real Estate Projects</a>
+                </div>
+              </span></a></li>
                 <li class="nav-item"><a href="{{ url_for('resume') }}" class="nav-link"><span>Résumé</span></a></li>
               <li class="nav-item"><a href="{{ url_for('index') }}#contact-section" class="nav-link"><span>Contact</span></a></li>
             </ul>
