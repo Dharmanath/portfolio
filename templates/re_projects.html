@@ -45,6 +45,7 @@
                 <a href="{{ url_for('ec_projects') }}">Ecommerce Projects</a>
                 <a href="{{ url_for('js_projects') }}">Job-Sector Projects</a>
                 <a href="{{ url_for('re_projects') }}">Real Estate Projects</a>
+                <a href="{{ url_for('en_projects') }}">Engineering Projects</a>
               </div>
             </span></a></li>
               <li class="nav-item"><a href="{{ url_for('resume') }}" class="nav-link"><span>Résumé</span></a></li>
@@ -78,7 +79,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3 text-center" style="padding-left: 20%;"><strong>RE How do I do it?</strong></h2>
+            <h2 class="mb-3 text-center" style="padding-left: 20%;"><strong>How do I do it?</strong></h2>
             <p>
               
             </p>
@@ -94,173 +95,31 @@
 
 
     <div id="ecommerce"></div>
-    <section class="ftco-section bg-light", id="project-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>1. Question answering model (Chatbot)</strong></h2>
-            <p>
-              
-            </p>
-            <!-- <p>
-              <img src="personal_images/chatbot.png" alt="" class="img-fluid">
-            </p> -->
-            <p> 
-              There are millions of products and billions of reviews for these products. An interactive chatbot would help the user to answer his questions by looking at these reviews. This will help to improve customer experience by providing valuable insights derived from a large user review base.    
-            </p>
-            
-            <P style="color: black;">
-              Architecture is not shown due to privacy concern
-            </P>
-            <p> <a href="">Find the demo page here[Sorry demo page no longer avaliable]</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p> This model is built on top of elasticsearch. Given a query, we will extract the relevant reviews from the review database. Identifying the aspects present in the question and retrieving only the corresponding reviews will help us to achieve precision </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-    
 
 
     <section class="ftco-section", id="project-1">
       <div class="container">
         <div class="row">
           <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>2. Attribute extraction</strong></h2>
+            <h2 class="mb-3"><strong>Search Suggest Ranker</strong></h2>
             <p>
-                Unlike existing information extraction methods that do not consider the popularity of product attributes, 
-                the proposed framework is not only able to detect popular product features from a collection of customer reviews but 
-                also map these popular features to the related product attributes.
+              We use a novel context-aware neural-network-based pairwise ranker to improve Search Suggestion Ranking  for providing the users with the top 
+              ‘k’ ranked suggestions out of a corpus of ‘n’ possible suggestions based on the prefix of the query that has been entered so far.
+            </p>
+            <p>
+              <img src="personal_images/ssr.png" alt="" class="img-fluid">
+            </p>
+            <p> There are 2 main components in this- Retrieval component & Reranking component. Retrieval component: This component fetches the candidate suggestions for a query prefix. Reranking component (Neural-network based pairwise reranker): This component reranks the candidate suggestions given a query prefix in accordance with the relevance.
 
             </p>
-            <p>
-              <img src="personal_images/attribute.png" alt="" class="img-fluid">
-            </p>
-            <p> To overcome the lack of the labelled dataset (like 'Camera' is an attribute in the review "Camera of this phone is excellent") and the amount of 
-              effort involved in manual labelling the proposed method uses an unsupervised topic modelling technic inorder to label the dataset. Once the labelled 
-              data set has been created LSTM based sequence labelling model is trained to identify the attributes present in the review.
-            </p>
-            <p> <a href="{{ url_for('vision') }}#">Attribute extraction demo</a></p>
+            <p> <a href="https://compass.com">Search demo</a></p>
             <div class="about-author d-flex p-4">
               <div class="bio mr-5">
                 <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
               </div>
               <div class="desc">
                 <h3>More information on the model</h3>
-                <p>This model can be used to identify the user interests and their sentiments for those interests or attributes. 
-                  For example: Given a review "Camera & Battery of this phone is good". It will identify camera and battery as attributes. </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-
-
-    <section class="ftco-section bg-light", id="project-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>3. Category Classification</strong></h2>
-            <p>
-              
-            </p>
-            <p>
-              <img src="personal_images/category.png" alt="" class="img-fluid">
-            </p>
-            <p> 
-                Top-performing deep architectures are trained on massive amounts of labeled data. In the absence of labeled data for a certain task, 
-                domain adaptation often provides an attractive option given that labeled data of similar nature but from a different domain are available.This model 
-                is used for domain adaptation in deep architectures that can be trained on large amount of labeled data from the source domain and large amount of unlabeled 
-                data from the target domain.
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Request for a demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>Traditional classification model cannot correctly predict for the samples drawn from a distribution that is different than training data distribution. 
-                  This model overcomes that disability and shows significant improvement in accuracy. </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-    <section class="ftco-section", id="project-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-10 ftco-animate">
-            <h2 class="mb-3"><strong>4. Brand and Model extraction</strong></h2>
-            <p>The goal of this task is extracting brands and models from eCommerce sites' titles (such as eBay or Amazon). 
-              The same model can be used to identify the brand and model of the youtube videos. This model is used to extract the brand and model across 
-              all the eCommerce pages including text pages and video pages which intern used in the Knowledge graph. 
-            </p>
-              <img src="personal_images/bm_model.png" alt="" class="img-fluid">
-
-            <p>
-              Bidirectional LSTMs and Conditional random fields are the building blocks of the model. LSTMs are used for the contextual representation.
-              CRFs are used to classify this contextual representations into Brand and Model.
-            </p>
-
-            <p> <a href="{{ url_for('vision') }}#">Brand and Model extraction</a></p>
-
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                  This model is one of the component of Knowledge graph created for youtube videos. In order to create the catelog of video data 
-                  knowledge graph plays an important role and Brand & Model identification is the important component of this knowledge graph.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 2 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-    <section class="ftco-section bg-light", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>5. Aspect based sentiment analysis</strong></h2>
-            <p>
-                Sentiment analysis is an important task in natural language processing.  It solves the computational processing of opinions, emotions, and subjectivity - sentiment is collected, analyzed and summarized.
-                Aspect-based  sentiment  analysis (ABSA),which aims to identify fine-grained opinion polarity towards a specific aspect, is a challenging subtask of sentiment analysis.
-
-            </p>
-            <p>
-              <img src="personal_images/absa.png" alt="" class="img-fluid">
-            </p>
-
-            <p> 
-            </p>
-            <p> <a href="{{ url_for('vision') }}#">aspect based sentiment analysis demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                  Let's say there is a review "Camera of this phone is good but battery is not that great". If we use traditional sentiment analysis, the sentiment
-                  of this sentence would be neutral but where as review expresses positive sentiment towards attribute 'Camera' and negative sentiment towards attribute
-                  'Battery'. Aspect based sentiment analysis helps us to give attribute-wise sentiments.
+                <p>Denoising autoencoder trained as a Siamese network with a dedicated decoder for query and suggestion reconstruction enabled the model to learn data distribution more intuitively.  Model is evaluated on MRR, CTR, query length as primary metrics. The model showed significant improvement over these evaluation metrics. The model gives embeddings at various levels which can be used for various downstream tasks.
                 </p>
               </div>
             </div>
@@ -270,328 +129,7 @@
     </section> <!-- .section -->
 
 
-    <section class="ftco-section", id="project-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-10 ftco-animate">
-            <h2 class="mb-3"><strong>6. Question generation</strong></h2>
-            <p>Recent approaches to question generation haveused modifications to a Seq2Seq architecture inspired  by  advances  in  machine  translation.
-              Models  are  trained  using  teacher  forcing  to optimise  only  the  one-step-ahead  prediction. However,  at  test  time,  the  model  is  
-              asked  to generate a whole sequence,  causing errors to propagate through the generation process.</p>
-              <img src="personal_images/question_generation.png" alt="" class="img-fluid">
 
-            <p>
-                Training  with  policy  gradient  methods  leads to  increases  in the  metrics  used as rewards.
-                Posing questions about a document in natural language is a crucial aspect of the effort to automatically process natural language data, 
-                enabling machines to ask clarification questions.</p>
-
-            <p> <a href="{{ url_for('index') }}#contact-section">Request question generation demo</a></p>
-
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                  This model is built inorder to generate quesions on video snippets. These question-answer snippets are placed on eComerce websites in the place of QA section.
-                  Business scope of this model is to increase user engagement on eComerce websites.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 2 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section bg-light", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>7. Question deduplication</strong></h2>
-            <p>
-                Understanding semantic relatedness of sentences would allow understanding of much of the user-generated content on  the  internet,  
-                such  as  on  Quora, Stackoverflow etc. This model is used to solve the  problem  of  actual  duplication  or  exact  semantic coincidence between questions.
-                 Solving this problem would be useful to helping Quora organize and deduplicate their knowledge base.
-            </p>
-            <p>
-              <img src="personal_images/question_deduplication.png" alt="" class="img-fluid">
-            </p>
-
-            <p> 
-              This model uses Siamese architecture to find the similar questions. Both the networks of this siamese architecture are transformers.
-              This transformer siamese architecture is trained using contrastive loss such as hinge loss. During the training similar questions are pulled towards to
-              each other in vector space while disimilar questions are pulled away from each other.
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Request question deduplication demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                    Question generation model and question deduplication models are tightly coupled.
-                     Since question generation model is an LSTM based generative model question deduplicaiton plays an important role in grouping these similar
-                      questions.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section", id="project-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-10 ftco-animate">
-            <h2 class="mb-3"><strong>8. Passage ranking</strong></h2>
-            <p>A simple question-answering pipeline consists of three main stages.  First, a large number(for example, a thousand) of possibly relevant documents 
-              to a given question are retrieved from acorpus by a standard mechanism,  such as BM25.   
-              In the second stage,passage re-ranking,  each of these documents is scored and re-ranked by a more computationally-intensive method.  
-              Finally,the top ten or fifty of these documents will be the source for the candidate answers by an answer generation module. </p>
-              <img src="personal_images/passage_ranking.png" alt="" class="img-fluid">
-
-            <p>
-                The job of the ranker is to estimate a scores of how relevant a candidate passage is to a query.  We use transformer as our ranker</p>
-
-                <p> <a href="{{ url_for('index') }}#contact-section">Request question deduplication demo</a></p>
-
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                    This model uses Siamese architecture to rank passages for a question. This model is tightly coupled with BM25. A large corpus of documents are 
-                    ranked for a query using BM25. A selected candidate set among these ranked documents are re-ranked using passage ranking.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 2 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-    <section class="ftco-section bg-light", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>9. Unsupervised abstractive summarization</strong></h2>
-            <p>
-                Abstractive summarization has been studied using neural sequence transduction methods with datasets of large, paired document-summary examples. 
-                However, such datasets are rare and the models trained from them do not generalize toother domains.  In this neural model architecture,
-                 documents (product or business reviews) with no summaries provided are summarized using unsupervised abstractive summarization.
-            </p>
-            <p>
-              <img src="personal_images/abstractive_summarization.png" alt="" class="img-fluid">
-            </p>
-
-            <p> This project contains auto-encoder where the mean of the representations of the input reviews decodes to a reasonable summary-review while 
-              not relying on any review-specific features. 
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Unsupervised abstractive summarization demo request</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>The standard approaches to neural abstractive summarization use supervised learning with many document-summary 
-                  pairs that are expensive to obtain at scale. Unsupervised abstractive model address this limitation, for multi-document summarization.</p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section", id="project-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-10 ftco-animate">
-            <h2 class="mb-3"><strong>10. Gender identification</strong></h2>
-            <p>How can we perform efficient inference and learning in directed probabilistic models, in the presence of continuous latent variables with intractable posterior
-               distributions, and large datasets? This model uses a stochastic variational inference and learning algorithm that scales to large datasets and, under some mild 
-               differentiability conditions, even works in the intractable case.</p>
-              <img src="personal_images/gender_identification.png" alt="" class="img-fluid">
-
-            <p>
-              In order to train this model we used youtube video dataset. From which audio spectrogram is extracted and Variational auto encoder is trained. Basic ResNet architectures are
-              used to incorporate encoder and decoders in variational auto encoders. 
-            </p>
-
-            <p> <a href="{{ url_for('vision') }}#">Gender identification using speech</a></p>
-
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                    Identifying the gender of the speaker is one of the popular use case for many busineses. 
-                    There are already labelled datasets are avaliable but these datasets are language specific and creating labelled dataset for every 
-                    language would be expensive. Hence this unsupervised approach would help to identify the gender of the speakers.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 2 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section bg-light", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>11. Information retrieval</strong></h2>
-            <p>
-                Information retrieval (IR) is the activity of obtaining information system resources that are relevant to an information need from a collection 
-                of those resources. Searches can be based on full-text or other content-based indexing. Information retrieval is the science of searching for 
-                information in a document, searching for documents themselves, and also searching for the metadata that describes data, and for databases of texts, 
-                images or sounds. 
-            </p>
-            <p>
-              
-            </p>
-
-            <p> Voise indexed Video Search Engine(VOISE) is the first video opnion search eangine. Information retrieval and Knowledge graphs are the key components
-              of this world opinion search engine.
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Request Information retrieval demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this project</h3>
-                <p>
-                  This information retrieval system incorporated on top of knowledge graph and uses elasticsearch, passage ranking model in order to serve
-                  the customer requests. IR systems compute a numeric score on how well each object in the database matches the query, and rank the objects
-                   according to this value. The top ranking objects are then shown to the user.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section", id="project-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-10 ftco-animate">
-            <h2 class="mb-3"><strong>12. Knowledge graph</strong></h2>
-            <p>The Knowledge Graph is a knowledge base which uses attributes, keyphrases and named entities and its services to enhance its search engine's 
-              results with information gathered from a variety of sources. The knowledge graph is also used to catalogue the inhouse data and analyze this data.  </p>
-              
-
-            <p>
-                This knowledge graph is built on top of the DBpedia knowledge graph. Identifying the named entities present in the text, extracting an 
-                entity subgraph from DBpedia and aggregating these subgraphs in order to create knowledge graph and server information retrieval 
-                requests using this knowledge graph.</p>
-
-            <p> <a href="{{ url_for('index') }}#contact-section">Request knowledge graph demo</a></p>
-
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this project</h3>
-                <p>
-                    Video insight knowledge graph with Deep walk neural network for cateloging and indexing the video insights for eComerce and non-eComerce pages, 
-                    integrated with Information retrieval system to server user queires. 
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 2 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <section class="ftco-section bg-light", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>13. Snippeting model</strong></h2>
-            <p>
-              Passage   retrieval   is   the determination  of  the  degree  of  relevance  of  blocks  of text,  namely  passages,  comprising  a  document.
-              Rather than  determining  the  relevance  of  a  document in  its entirety,  passage  retrieval  determines  the  relevance  of the  individual  passages.
-            </p>
-            <p>
-              
-            </p>
-
-            <p> 
-              To index video opinions, the first step is to identify those opinions and these opinions are identified using passage retrieval or snippeting model.
-              The model uses enhanced topic modelling such as LDA perplexity to identify the number of topics and NMF to retrieve these topics or opinions from the videos.
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Request for Snippeting model demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                    Every social media video mostly consists of relevant part and irrelevant content.
-                     To differentiate this relevant portion from the irrelevant, snippeting model would be the better choice.
-                </p>
-              </div>
-            </div>
-          </div> <!-- Project - 1 -->
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-    <div id="jobsector"></div>
-
-    <!-- <section class="ftco-section", id="project-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10  ftco-animate">
-            <h2 class="mb-3"><strong>14. Skillset Extraction</strong></h2>
-            <p>
-              Passage   retrieval   is   the determination  of  the  degree  of  relevance  of  blocks  of text,  namely  passages,  comprising  a  document.
-              Rather than  determining  the  relevance  of  a  document in  its entirety,  passage  retrieval  determines  the  relevance  of the  individual  passages.
-            </p>
-            <p>
-              
-            </p>
-
-            <p> 
-              To index video opinions, the first step is to identify those opinions and these opinions are identified using passage retrieval or snippeting model.
-              The model uses enhanced topic modelling such as LDA perplexity to identify the number of topics and NMF to retrieve these topics or opinions from the videos.
-            </p>
-            <p> <a href="{{ url_for('index') }}#contact-section">Request for Snippeting model demo</a></p>
-            <div class="about-author d-flex p-4">
-              <div class="bio mr-5">
-                <img src="personal_images/personal-logo.png" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>More information on this model</h3>
-                <p>
-                    Every social media video mostly consists of relevant part and irrelevant content.
-                     To differentiate this relevant portion from the irrelevant, snippeting model would be the better choice.
-                </p>
-              </div>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </section>  -->
-    <!-- .section -->
 
 
     <section class="ftco-section", id="coming">

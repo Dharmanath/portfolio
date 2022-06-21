@@ -24,6 +24,10 @@ def js_projects():
 def re_projects():
     return render_template('re_projects.html')
 
+@app.route('/en_projects')
+def en_projects():
+    return render_template('en_projects.html')
+
 @app.route('/resume')
 def resume():
     return render_template('resume.html')
