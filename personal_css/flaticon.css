@@ -3,6 +3,12 @@
   	Creation date: 04/01/2019 13:45
   	*/
 
+@font-face {
+  font-family: Noteworthy;
+  src: url("../fonts/noteworthy/Noteworthy-Lt.ttf")  format('truetype');
+}
+
+.use-noteworthy-font { font-family: Noteworthy; font-size: 22px; line-height: 1.4;}
 
 @font-face {
   font-family: "Flaticon";

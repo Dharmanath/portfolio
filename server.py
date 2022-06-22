@@ -40,6 +40,10 @@ def personal_css(path):
 def personal_images(path):
     return send_from_directory('personal_images', path)
 
+@app.route('/blogs_images/<path:path>')
+def blogs_images(path):
+    return send_from_directory('blogs_images', path)
+
 @app.route('/personal_js/<path:path>')
 def personal_js(path):
     return send_from_directory('personal_js', path)
@@ -51,6 +55,10 @@ def personal_fonts(path):
 @app.route('/personal_data/<path:path>')
 def personal_data(path):
     return send_from_directory('personal_data', path)
+
+@app.route('/blogs/<path:path>')
+def blog_data(path):
+    return send_from_directory('blogs', path)
 
 @app.route('/vision')
 def vision():
