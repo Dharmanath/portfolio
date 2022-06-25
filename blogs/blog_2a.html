@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta name="title" property="og:title" content="Features of any distribution">
+    <meta name="description" property="og:description" content="Every data follows some distribution and every distribution is defined with a set of features like mean, median, mode etc.. In this section we will address these features.">
+    <title>Features of any distribution</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Measure of central tendency, Measure of spread, Mean, Median, mode, range, IQR, Inter quartile range, variance, standard deviation, z-score, z-table">
+    <meta name="author" content="Dharmanath Patil">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../personal_css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../personal_css/animate.css">
+    
+    <link rel="stylesheet" href="../personal_css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../personal_css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../personal_css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../personal_css/aos.css">
+    <link rel="stylesheet" href="../personal_css/sec_cards.css">
+
+    <link rel="stylesheet" href="../personal_css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../personal_css/flaticon.css">
+    <link rel="stylesheet" href="../personal_css/icomoon.css">
+    <link rel="stylesheet" href="../personal_css/style.css">
+    <link rel="stylesheet" href="../personal_css/drop_down.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQCNW5KN0D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FQCNW5KN0D');
+    </script>
+    
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="https://dharmanathpatil.com/">DJ</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="https://dharmanathpatil.com" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a class="nav-link"><span> Projects
+              <div class="dropdown-content">
+                <a href="https://dharmanathpatil.com/ec_projects">Ecommerce Projects</a>
+                <a href="https://dharmanathpatil.com/js_projects">Job-Sector Projects</a>
+                <a href="https://dharmanathpatil.com/re_projects">Real Estate Projects</a>
+                <a href="https://dharmanathpatil.com/en_projects">Engineering Projects</a>
+              </div>
+            </span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+    <section class="ftco-section", id="project-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10  ftco-animate">
+            <!-- <h2 class="mb-3"><strong>1. Attribute extraction</strong></h2> -->
+            <p class="use-noteworthy-font"><b>Features of any distribution</b></p>
+            <p>
+              <img src="../blogs_images/blog_2a_img.png" alt="" class="img-fluid">
+            </p>
+            <p class="use-noteworthy-font">
+              <br>Every data follows some distribution and every distribution is defined with a set of features like mean, median, mode etc.. In this section we will address these features.
+            </p>
+            <p class="use-noteworthy-font">
+              In this section we will try to understand following things:
+              <br>&emsp;&emsp;&emsp;&emsp;1.  Features of every distribution
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;I. Measure of central tendency
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a. Mean
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. Media
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c. Mode
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;II. Measure of Spread
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;d. Range
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;e. Midrange
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;f. Inter Quartile Range (IQR)
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;g. Variance
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;h. Standard deviation
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;i. Z-Score
+              <br>&emsp;&emsp;&emsp;&emsp;2. Understanding z-score and z-table
+              <br>&emsp;&emsp;&emsp;&emsp;3. Some Problems on z-score
+					    <br>&emsp;&emsp;&emsp;&emsp;3. Example problem
+            </p>
+
+            <p class="use-noteworthy-font">
+              Please Note: Though the 
+              images in this section are corresponding to the normal distributions but these features can also be used on the other distributions too.
+              If the definations are not clear, you can jump to the "Example problem" section to understand these features more intuitively.
+            </p>
+
+            <p class="use-noteworthy-font"><br><mark>1. Features of every distribution</mark></p>
+
+            <p class="use-noteworthy-font">There are 2 types of features in every distribution those are: Feasure that measure central tendency like mean, median and mode.
+               Features that measure spread of the data like variance, standard deviation, range etc.. Let's understand these features:
+            </p>
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_mean.jpeg" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>a) Mean:</mark> Mean is the average of the given numbers and is calculated by dividing the sum of given numbers by the total number of numbers.  </p>
+                  <img src="../blogs_images/blog_2_mean_equation.png" alt="" style="width: 40%; height: 20%;">
+              </div>
+            </div>
+            
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_median.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><br><mark>b) Median:</mark>  The median is the middle value when a data set is ordered from least to greatest. </p>
+                <img style="display: none;" src="../blogs_images/blog_2_mean_equation.png" alt="" style="width: 40%; height: 20%;">
+              </div>
+            </div>
+
+            <div class="about-author d-flex p-4">
+              <!-- <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_variance.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div> -->
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>c) Mode:</mark> The mode is the number that occurs most often in a data set. 
+                  </p>
+                  <img src="../blogs_images/blog_2_variance_equation.png" alt="" style="width: 30%; height: 30%;">
+              </div>
+            </div>
+
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_range.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>d) Range:</mark> The Range is the difference between the lowest and highest values.</p>
+                  <p style="color: black;">range = highest value - smallest value</p>
+              </div>
+            </div>
+
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <!-- <img src="../blogs_images/blog_2_range.png" alt="Image placeholder" class="img-fluid mb-4"> -->
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>e) Midrange:</mark> The midrange of the data set is simply the value between the biggest value and the lowest</p>
+                  <p style="color: black;">midrange = ( highest + lowest ) / 2</p>
+              </div>
+            </div>
+
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_iqr.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>f) Inter Quartile Range (IQR):</mark> It measures the spread of the middle half of the data. It is the range for the 
+                  middle 50% of your data.</p>
+                  <img src="../blogs_images/blog_2_iqr_equation.png" alt="" style="width: 40%; height: 40%;">
+              </div>
+            </div>
+            
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_variance.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>g) Variance:</mark> The term variance refers to the spread of data in a dataset. More specifically, variance 
+                  measures how far each number of the dataset is from the mean.  
+                  </p>
+                  <img src="../blogs_images/blog_2_variance_equation.png" alt="" style="width: 40%; height: 40%;">
+              </div>
+            </div>
+
+
+
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_sd.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>h) Standard deviation:</mark> A standard deviation (or σ) is a measure of how dispersed the data is in relation to the mean.</p>
+                  <img src="../blogs_images/blog_2_sd_equation.png" alt="" style="width: 40%; height: 30%;">
+              </div>
+            </div>
+
+            <p class="use-noteworthy-font">
+              Perhaps we might say that standard deviation makes more sense, mathematically and logically, than 
+			variance. The biggest reason for us to pay more attention to the standard deviation is that it has the 
+			same units as the original statistic/dataset. If a study results with an average of 75 people with a 			]
+			standard deviation of  3, we can say that the standard deviation is 3 people. It makes no sense to say 
+			that the variance is 9 square people, so variance has no units, usually. 
+            </p>
+
+
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2_zscore.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><mark>i) Z-Score:</mark> A z-score is a measure of the number of standard deviations a particular data point is away from the mean.</p>
+                  <img src="../blogs_images/blog_2_zscore_equation.jpeg" alt="" style="width: 40%; height: 40%;">
+              </div>
+            </div>
+
+
+
+
+
+
+            <p class="use-noteworthy-font"><br><mark>2. Understanding z-score and z-table</mark></p>
+            <p class="use-noteworthy-font">As mentioned above: A z-score is a measure of the number of standard deviations a particular data point is away from the mean.
+        All values that are below the mean have negative z-scores, while all values that are above the mean have positive z-scores. 
+        Z-scores range from -3 standard deviations up to +3 standard deviations.
+        <br><br> Z-table also called as standard normal table gives the percentage of area from mean to z-score in standard normal distribution.
+        <br> <a href="https://www.intmath.com/counting-probability/z-table.php" >https://www.intmath.com/counting-probability/z-table.php</a>
+           </p>
+
+
+           <p class="use-noteworthy-font"><br><mark>3. Some Problems on z-score and z-table</mark></p>
+           <p class="use-noteworthy-font">Problem 1: On a nationwide math test, the mean was 65 and the standard deviation was 10. If Robert scored 81, what was his z-score?</p>
+           <p class="use-noteworthy-font">
+            &emsp;&emsp;&emsp;&emsp;z = ( x-µ ) / σ		where x is score, σ is SD and µ is mean
+            <br>&emsp;&emsp;&emsp;&emsp;&emsp;= ( 81-65 ) / 10
+            <br>&emsp;&emsp;&emsp;&emsp;z-score = 1.60
+            <br>This states that Robert scored 1.60 standard deviation above the mean
+           </p>
+
+           <br><p class="use-noteworthy-font">Problem 2: Given a standard normal distribution find the probability of choosing the value that is greater than 1 standard deviation away</p>
+           <p class="use-noteworthy-font">
+            &emsp;&emsp;&emsp;&emsp;Given z = 1 We need to find z-table(z)
+            <br>&emsp;&emsp;&emsp;&emsp;We can refer to <a href="https://www.intmath.com/counting-probability/z-table.php" >https://www.intmath.com/counting-probability/z-table.php</a>
+            <br>&emsp;&emsp;&emsp;&emsp;z-table(z) = 0.3413	
+            <br>&emsp;&emsp;&emsp;&emsp;Hence the percentage of area from mean to z-score = 0.3413
+            <br>&emsp;&emsp;&emsp;&emsp;But We are interested in the area/probability that is greater than 1 standard deviation away
+            <br>&emsp;&emsp;&emsp;&emsp;In Standard normal distribution, the area above the mean is 0.50
+            <br>&emsp;&emsp;&emsp;&emsp;Hence the area/probability that is greater than 1 standard deviation away = 0.50 - 0.3413
+            <br>&emsp;&emsp;&emsp;&emsp;Hence the probability is 0.16
+            <br>Hence the area/probability that is greater than 1 standard deviation away is 16%
+           </p>
+
+
+           <p class="use-noteworthy-font"><br><mark>4. Example problem</mark></p>
+           <p class="use-noteworthy-font">Bar graph shows the scores obtained by 5 
+            students in Midterm and Final. Let's try to
+            answer following questions:</p>
+            <div class="about-author d-flex p-4">
+              <div class="bio mr-5">
+                <img src="../blogs_images/blog_2a_problem.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <p class="use-noteworthy-font"><br>1. what was the median score for final exam?
+                  <br>2. What is the midrange of the midterm 
+                       scores ?
+                       <br>3. What was the average student score for
+                       the final exam ?
+                       <br>4. What was the mode for final exam 
+                                                      scores ?
+                      <br>5. What is the range of the midterm scores?</p>
+              </div>
+            </div>
+
+
+            <p class="use-noteworthy-font">1. Median score for the final exam:
+              <br>&emsp;&emsp;step1:  List down all the scores in final exam: 100, 100, 100, 75, 80
+              <br>&emsp;&emsp;step2: Sort all these exams: 75, 80, 100, 100, 100
+              <br>&emsp;&emsp;step3: find the score which is in middle of this list: 100
+              <br>&emsp;&emsp;answer: 100</p>
+
+
+              <p class="use-noteworthy-font">2. Midrange of midterm scores:
+                <br>&emsp;&emsp;step1: List all mid term scores: 90, 90, 60, 100, 80
+                <br>&emsp;&emsp;step2: Find highest and lowest score in this lis: highest=100, lowest=60
+                <br>&emsp;&emsp;step3: midrange = ( highest + lowest ) / 2
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= ( 100 + 60 ) /2
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;midrange = 80
+                    <br>&emsp;&emsp;answer: 80</p>
+
+
+                <p class="use-noteworthy-font">3. Average of final exam scores:
+                  <br>&emsp;&emsp;step1: List all final exam scores: 100, 100, 100, 75, 80
+                  <br>&emsp;&emsp;step2: Find the total number of samples present in above list: n=5
+                  <br>&emsp;&emsp;step3: average = sum of all numbers / n
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= ( 100+100+100+75+80) / 5
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;average = 91
+                      <br>&emsp;&emsp;answer: 91</p>
+
+
+                <p class="use-noteworthy-font">4. Mode for final exam scores:
+                  <br>&emsp;&emsp;step1:  List all final exam scores: 100, 100, 100, 75, 80
+                  <br>&emsp;&emsp;step2: Find the frequency of each score
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Freq ( 100 ) = 3
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Freq ( 75 ) = 1
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Freq ( 80 ) = 1
+                  <br>&emsp;&emsp;step3: Find the most frequent score: That is 100
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mode = 100
+                      <br>&emsp;&emsp;answer: 100</p>
+
+                <p class="use-noteworthy-font">5.  Range of midterm scores:
+                  <br>&emsp;&emsp;step1: List all mid term scores: 90, 90, 60, 100, 80
+                  <br>&emsp;&emsp;step2: Find highest and lowest score in this lis: highest=100, lowest=60
+                  <br>&emsp;&emsp;step3: range = highest - lowest
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= 100 - 60
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= 40
+                      <br>&emsp;&emsp;answer: 40</p>
+
+
+            <p class="use-noteworthy-font"><br><mark>References </mark></p>
+            <p class="use-noteworthy-font">
+              <a href="https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/one-categorical-variable/v/reading-bar-charts-3?modal=1" > https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/one-categorical-variable/v/reading-bar-charts-3?modal=1 </a>       
+              <br> <a href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-data-statistics/mean-and-median/v/statistics-intro-mean-median-and-mode" > https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-data-statistics/mean-and-median/v/statistics-intro-mean-median-and-mode </a>
+              <br> <a href="https://towardsdatascience.com/mean-median-mode-which-central-tendency-measure-to-use-when-9fb3ebbe3006" >https://towardsdatascience.com/mean-median-mode-which-central-tendency-measure-to-use-when-9fb3ebbe3006</a>
+              <br> <a href="https://byjus.com/maths/mean-median-mode/" >https://byjus.com/maths/mean-median-mode/</a>
+            </p>
+            
+
+          </div> <!-- Project - 1 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <section class="ftco-section", id="coming">
+
+
+
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../personal_js/jquery.min.js"></script>
+  <script src="../personal_js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../personal_js/popper.min.js"></script>
+  <script src="../personal_js/bootstrap.min.js"></script>
+  <script src="../personal_js/jquery.easing.1.3.js"></script>
+  <script src="../personal_js/jquery.waypoints.min.js"></script>
+  <script src="../personal_js/jquery.stellar.min.js"></script>
+  <script src="../personal_js/owl.carousel.min.js"></script>
+  <script src="../personal_js/jquery.magnific-popup.min.js"></script>
+  <script src="../personal_js/aos.js"></script>
+  <script src="../personal_js/jquery.animateNumber.min.js"></script>
+  <script src="../personal_js/scrollax.min.js"></script>
+
+  <script src="../personal_js/main.js"></script>
+
+  <script>
+    var viewMode = getCookie("view-mode");
+    if(viewMode == "desktop"){
+        viewport.setAttribute('content', 'width=1024');
+    }else if (viewMode == "mobile"){
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    }
+  </script>
+
+  </body>
+</html>

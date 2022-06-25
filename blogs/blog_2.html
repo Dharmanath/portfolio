@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta name="title" property="og:title" content="Hypothesis testing simplified">
+    <meta name="description" property="og:description" content="A statistical hypothesis test is a method of statistical inference used to decide whether the data at hand sufficiently support a particular hypothesis. In this blog we will try to understand this definition more intuitively with an example.">
+    <title>Hypothesis testing simplified</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hypothesis testing, example, statistics, machine learning, z-score, p-value, significance level, Null hypothesis, Alternative hypothesis">
+    <meta name="author" content="Dharmanath Patil">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../personal_css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../personal_css/animate.css">
+    
+    <link rel="stylesheet" href="../personal_css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../personal_css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../personal_css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../personal_css/aos.css">
+    <link rel="stylesheet" href="../personal_css/sec_cards.css">
+
+    <link rel="stylesheet" href="../personal_css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../personal_css/flaticon.css">
+    <link rel="stylesheet" href="../personal_css/icomoon.css">
+    <link rel="stylesheet" href="../personal_css/style.css">
+    <link rel="stylesheet" href="../personal_css/drop_down.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQCNW5KN0D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FQCNW5KN0D');
+    </script>
+    
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="https://dharmanathpatil.com/">DJ</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="https://dharmanathpatil.com" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a class="nav-link"><span> Projects
+              <div class="dropdown-content">
+                <a href="https://dharmanathpatil.com/ec_projects">Ecommerce Projects</a>
+                <a href="https://dharmanathpatil.com/js_projects">Job-Sector Projects</a>
+                <a href="https://dharmanathpatil.com/re_projects">Real Estate Projects</a>
+                <a href="https://dharmanathpatil.com/en_projects">Engineering Projects</a>
+              </div>
+            </span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+    <section class="ftco-section", id="project-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10  ftco-animate">
+            <!-- <h2 class="mb-3"><strong>1. Attribute extraction</strong></h2> -->
+            <p class="use-noteworthy-font"><b>Hypothesis testing simplified</b></p>
+            <p>
+              <img src="../blogs_images/blog_2_img.jpeg" alt="" class="img-fluid">
+            </p>
+            <p class="use-noteworthy-font">
+              <a href="https://en.wikipedia.org/wiki/Statistical_hypothesis_testing" target="_blank" >Wiki</a> says - A statistical hypothesis test is a method of statistical inference used to decide whether the data at hand sufficiently support a particular hypothesis. 
+              In this blog we will try to understand this definition more intuitively with an example. 
+            </p>
+            <p class="use-noteworthy-font">
+              In this section we will try to understand following things:
+					    <br>&emsp;&emsp;&emsp;&emsp;1. Why do we need hypothesis testing?
+					    <br>&emsp;&emsp;&emsp;&emsp;2. Understanding hypothesis testing
+              <br>&emsp;&emsp;&emsp;&emsp;3. Problem on hypothesis testing
+            </p>
+
+
+            <br><p class="use-noteworthy-font"><mark>1. Why do we need hypothesis testing?</mark></p>
+            <p class="use-noteworthy-font">
+              In the real world we do a lot of observations or experiments and we would like to validate those experiments.
+              <br>For example: 
+              <br>&emsp;&emsp;&emsp;&emsp;-whether the new drug is better than the previous one.
+              <br>&emsp;&emsp;&emsp;&emsp;-whether the drug had an impact on the growth rate of a population.
+              <br>&emsp;&emsp;&emsp;&emsp;-whether the new refrigerator significantly reduces the power consumption	
+              <br>&emsp;&emsp;&emsp;&emsp;-whether market sentiment increased after the new budget announcement.
+            </p>
+
+
+
+            <br><p class="use-noteworthy-font"><mark>2. Understanding hypothesis testing</mark></p>
+            <p class="use-noteworthy-font">
+              Let's take an example to understand hypothesis testing more intuitively: Apple has released a new 
+			version of the app. They have 2 distributions of user's-spend-time, corresponding to old and new versions 
+			respectively. They want to know whether a new version made any significant improvement over the user's 
+			spend time.
+            <br> We will try to understand this problem in 5 steps:
+            </p>
+            <p class="use-noteworthy-font">
+              step1: Following diagram shows the distribution for user spend time on both the versions of the app 
+				individually.
+            </p>
+            <img src="../blogs_images/blog_2_step_1.png" alt="" class="img-fluid">
+            <p class="use-noteworthy-font">
+              As you can see there are 2 distributions 
+              <br>&emsp;&emsp;&emsp;&emsp;a) Version 1.0 user-spend-time distribution with mean = µ0  
+              <br>&emsp;&emsp;&emsp;&emsp;b) Version 2.0 user-spend-time distribution with mean = µ1
+            </p>
+
+
+
+            <p class="use-noteworthy-font">
+              <br><br>Step2: From the problem statement we can understand that we want to see whether there is a 
+              significant improvement in the mean users-spend-time in the latest version.  From this we already know that µ1 > µ0  but whether this improvement is significant or fluke 
+              is the question that we want to address. 
+            </p>
+
+            <p class="use-noteworthy-font">
+              <br><br>Step3:  Lets plot version 2.0 mean on version 1.0 distribution. It could be anywhere above µ0  but lets 
+              randomly select a place to plot it, which helps us to understand further concepts better
+            </p>
+            <img src="../blogs_images/blog_2_step3.png" alt="" class="img-fluid">
+            <p class="use-noteworthy-font">
+              What does the above diagram or distribution implies?
+              <br>&emsp;&emsp;&emsp;&emsp;- We are trying to see where exactly the mean of version 2 is situated in version 1 distribution.
+              <br>&emsp;&emsp;&emsp;&emsp;- To put it in another words what is the probability of seeing µ1 in version 1.0 distribution
+              <br>&emsp;&emsp;&emsp;&emsp;- Mathematically
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;P( x==µ1  |  version 1.0 distribution)
+    
+            <br>As we can remember normal distributions are continuous distributions.. Probability at any point 
+            in normal distribution is always 0. So, instead of finding the probability of seeing µ1 in version 1 distribution as follows:
+            <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; P( x==µ1  |  version 2.0 distribution) 
+            <br>we can find the probability of seeing µ1 or any greater value in version 1 distribution: 
+            <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;P( x>=µ1  |  version 2.0 distribution)
+            <br>Why x>=µ1  ? To answer this question let's have a look at the above distribution. If µ1 is a significant 
+				improvement then anything above that would also make it a significant improvement too right? 
+    
+            Hence, we are looking at this area:
+            </p>
+            <img src="../blogs_images/blog_2_step_3_2.png" alt="" class="img-fluid">
+
+
+
+            <p class="use-noteworthy-font">
+              <br><br>Step4: We already know that the area under probability distribution is 1. In the version 1 distribution 
+              we really don't know where exactly µ1 is situated.
+            </p>
+            <img src="../blogs_images/blog_2_step_4.png" alt="" class="img-fluid">
+
+            <p class="use-noteworthy-font">
+            <u>What it implies version 2 mean i.e µ1 being very close to version 1 mean i.e µ0 in version 1 distribution ?</u>
+            <br>Ans: It says the probability of seeing x>=µ1 in version 1 distribution is very high. 
+				    In other words the if area under normal distribution corresponding to x=>µ1 is more then there 
+				    is no significant change or difference
+				   Hence, version 2 is not a significant improvement over version 1  
+
+           <br><br><u>What it implies version 2 mean i.e µ1 being very far from version 1 mean i.e µ0 in version 1 distribution ?</u>
+			     <br>Ans: Mathematically it says the probability of seeing x>=µ1 in version 1 distribution is very low. 
+				    In other words the if area under normal distribution corresponding to x=>µ1 is less then there 
+				    is a significant change or difference
+				   Hence, version 2 is a significant improvement over version 1 
+            </p>
+
+
+
+            <p class="use-noteworthy-font">
+              <br><br>Step5:  How do we know whether the area is more or less ? 
+              <br>For this we need a threshold. This threshold is usually called as significance value. 
+              <br>if area under normal distribution corresponding to x=>µ1 is more than threshold area we can say 
+               version 2 is not a significant improvement over version 1 
+               <br>else area under normal distribution corresponding to x=>µ1 is less than threshold area we can say
+              version 2 is a significant improvement over version 1
+            </p>
+            <img src="../blogs_images/blog_2_step_5.png" alt="" class="img-fluid">
+            <p class="use-noteworthy-font">			area under normal distribution corresponding to o x=>µ1  is referred as p-value
+            </p>
+
+
+            <br><p class="use-noteworthy-font"><mark>3. Problem on hypothesis testing</mark></p>
+            <br><p class="use-noteworthy-font"><u><b>Prerequisite alert:</b></u> Following problem requires Understanding of "features of distributions like mean, median, mode, range, z-score, variance, 
+              standard deviation etc.." If you are not familiar with these please take a look at this blog - <a href="https://dharmanathpatil.com/blogs/blog_2a.html" target="_blank" >Features of any distribution</a></p>
+            <p class="use-noteworthy-font">Example Problem: A teacher claims that the mean score of students in his class is greater than 82 
+              with a standard deviation of 20. If a sample of 81 students was selected with a mean score 
+              of 90 then check if there is enough evidence to support this claim at a 0.05 significance level.</p>
+
+              <p class="use-noteworthy-font">Solution: This is one tailed test. Since teacher is interested in whether observed mean is grater than
+                population mean</p>
+
+                <p class="use-noteworthy-font">					&emsp;&emsp;&emsp;&emsp;Null Hypothesis : Population mean = Sample mean
+                  <br>&emsp;&emsp;&emsp;&emsp;Alt Hypothesis:   Population mean &lt; Sample mean
+                  <br>
+                  <br>&emsp;&emsp;&emsp;&emsp;population statistics:  μ=82  σ=20   
+                  <br>&emsp;&emsp;&emsp;&emsp;sample statistics:      μm=82   n=81        
+                  <br>&emsp;&emsp;&emsp;&emsp;significance level:      α=0.05
+
+                  <br>
+                  <br>&emsp;&emsp;&emsp;&emsp;Calculating z-score:  z = (x – μ) / (σ / √n)
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   = ( 90-82) / ( 20/√81)
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   z-score=3.6
+                  <br>&emsp;&emsp;&emsp;&emsp;Hence observed mean is 3.6 standard error of mean above population mean
+
+                  <br>
+                  <br>&emsp;&emsp;&emsp;&emsp;Calculating p-value: We want to calculate the area under normal distribution which 
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;is above 3.6 SD away from mean
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   p-value = Total area above mean - Total area till 3.6 SD above mean
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    = 0.50 - ztable(3.6)
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;     = 0.50 - 0.4998
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   p-value =  0.0002
+                  <br>&emsp;&emsp;&emsp;&emsp;Hence p(x>= μm | Null hypothesis is true )  or p-value is 0.0002
+
+                  <br>
+                  <br>&emsp;&emsp;&emsp;&emsp;Conclusion:
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Since significance level or  α > p-value we can reject null hypothesis
+                  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Hence there is a significant improvement in the mean of score
+
+
+                </p>
+
+
+
+            <p class="use-noteworthy-font"><br><mark>References </mark></p>
+            <p class="use-noteworthy-font">
+              <a href="https://www.youtube.com/watch?v=KS6KEWaoOOE" >https://www.youtube.com/watch?v=KS6KEWaoOOE </a>       
+              <br> <a href="https://www.youtube.com/watch?v=5ABpqVSx33I" >https://www.youtube.com/watch?v=5ABpqVSx33I </a>
+              <br> <a href="https://www.youtube.com/watch?v=-FtlH4svqx4" >https://www.youtube.com/watch?v=-FtlH4svqx4</a>
+              <br> <a href="https://math.stackexchange.com/questions/1796478/sample-standard-deviation-given-population-standard-deviation" >https://math.stackexchange.com/questions/1796478/sample-standard-deviation-given-population-standard-deviation</a>
+              <br> <a href="https://www.scribbr.com/methodology/population-vs-sample/#:~:text=A%20population%20is%20the%20entire,t%20always%20refer%20to%20people." >https://www.scribbr.com/methodology/population-vs-sample/#:~:text=A%20population%20is%20the%20entire,t%20always%20refer%20to%20people.</a>
+              <br> <a href="https://towardsdatascience.com/hypothesis-testing-z-scores-337fb06e26ab" >https://towardsdatascience.com/hypothesis-testing-z-scores-337fb06e26ab</a>
+              <br> <a href="https://onlinestatbook.com/2/sampling_distributions/samp_dist_mean.html" >https://onlinestatbook.com/2/sampling_distributions/samp_dist_mean.html</a>
+              <br> <a href="https://www.statisticshowto.com/probability-and-statistics/z-score/" >https://www.statisticshowto.com/probability-and-statistics/z-score/</a>
+              <br> <a href="https://www.analyticsvidhya.com/blog/2020/06/statistics-analytics-hypothesis-testing-z-test-t-test/" >https://www.analyticsvidhya.com/blog/2020/06/statistics-analytics-hypothesis-testing-z-test-t-test/</a>
+              <br> <a href="https://math.stackexchange.com/questions/504288/what-situation-calls-for-dividing-the-standard-deviation-by-sqrt-n" >https://math.stackexchange.com/questions/504288/what-situation-calls-for-dividing-the-standard-deviation-by-sqrt-n</a>
+              <br> <a href="https://www.cuemath.com/data/z-test/" >hhttps://www.cuemath.com/data/z-test/</a>
+            </p>
+            
+
+          </div> <!-- Project - 1 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <section class="ftco-section", id="coming">
+
+
+
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../personal_js/jquery.min.js"></script>
+  <script src="../personal_js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../personal_js/popper.min.js"></script>
+  <script src="../personal_js/bootstrap.min.js"></script>
+  <script src="../personal_js/jquery.easing.1.3.js"></script>
+  <script src="../personal_js/jquery.waypoints.min.js"></script>
+  <script src="../personal_js/jquery.stellar.min.js"></script>
+  <script src="../personal_js/owl.carousel.min.js"></script>
+  <script src="../personal_js/jquery.magnific-popup.min.js"></script>
+  <script src="../personal_js/aos.js"></script>
+  <script src="../personal_js/jquery.animateNumber.min.js"></script>
+  <script src="../personal_js/scrollax.min.js"></script>
+
+  <script src="../personal_js/main.js"></script>
+
+  <script>
+    var viewMode = getCookie("view-mode");
+    if(viewMode == "desktop"){
+        viewport.setAttribute('content', 'width=1024');
+    }else if (viewMode == "mobile"){
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    }
+  </script>
+
+  </body>
+</html>
