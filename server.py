@@ -63,3 +63,11 @@ def blog_data(path):
 @app.route('/vision')
 def vision():
     return render_template('VISION.html')
+
+@app.route('/robots.txt')
+def send_report():
+    return send_from_directory('personal_data', "robots.txt")
+
+@app.route('/sitemap.xml')
+def send_xml():
+    return send_from_directory('personal_data', "sitemap.xml")
