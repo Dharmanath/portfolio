@@ -77,6 +77,8 @@
               <img src="../blogs_images/blog_0_img.png" alt="" class="img-fluid">
             </p>
 
+            <br>
+
             <p class="use-noteworthy-font">
               In this section we will be talking about different types of data. I have listed down different types of data:
               <br>&emsp;&emsp;&emsp;&emsp;1. Qualitative or Categorical data
@@ -87,116 +89,51 @@
               <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. Continious data
             </p>
 
-            <p class="use-noteworthy-font">
-              Let's try to understand these things with an simple example:
-              (Note: Usually distributions are plotted w.r.t frequency/count or probability/percentage.)
-              Example: A school has made an survey about hours of time spent for study vs marks obtained by the 
-              students. Below is the table for this study.
-            </p>
-
-            <img src="../blogs_images/blog_1_table.png" alt="" class="img-fluid">
-
-            <p class="use-noteworthy-font"><mark>1. Marginal Distribution</mark></p>
-            <p class="use-noteworthy-font">
-              In the above diagram there are 2 variables.  Those are Marks and Hours. 
-              We can plot distributions for these variables individually.
-            </p>
-            <img src="../blogs_images/blog_1_marginal_distribution.png" alt="" class="img-fluid">
-            <p class="use-noteworthy-font">
-              Observe in both of these charts y-axis is corresponding to frequency or count. These 2 charts are plotted 
-			        for individual variable and referred as marginal distributions.
-			      Marginal distribution doesn't give relationship between the 2 variables. That's where joint distribution 
-			      comes into picture. Before we move into joint distribution lets understand conditional distribution
-            </p>
+            <br>
 
 
-            <p class="use-noteworthy-font"><mark>2. Conditional Distribution</mark></p>
+            <p class="use-noteworthy-font"><mark>1.	Qualitative or Categorical data </mark></p>
             <p class="use-noteworthy-font">
-              In the above table we can put some conditions for example: Distribution of marks obtained by the students
-			      who studied 30 hours. Then this becomes conditional distribution. Marginal distributions can be plotted w.r.t count or percentage 
-            but conditional distributions are always plotted w.r.t percentages.
-            </p>
-            <img src="../blogs_images/blog_1_conditional_distribution.png" alt="" class="img-fluid">
-            <p class="use-noteworthy-font">
-              As specified in the beginning of conditional distribution section we are only interested in those students
-              who studied for 30 hours.
-        
-              Instead of plotting count or number of students on y axis we plotted percentage because conditional 
-              distribution always represented with percentage.
+              Qualitative data, also known as the categorical data, describes the data that fits into the categories. 
+              Example for Qualitative/Categorical data: person’s gender, home town etc. 			
+              <br>
+              <br>Qualitative/Categorical data are not numerical but sometimes categorical data can hold numerical values 
+              (quantitative value), but those values do not have a mathematical sense. Examples of the categorical data 
+              are birthdate, favourite sport, school postcode. Here, the birthdate and school postcode hold the 
+              quantitative value, but it does not give numerical meaning.
             </p>
 
+            <p>
+              <img src="../blogs_images/blog_0_categorical.png" alt="" class="img-fluid">
+            </p>
 
-            <p class="use-noteworthy-font"><mark>3. Joint Distribution or Multivariate distribution</mark></p>
+            <br>
+
+
+            <p class="use-noteworthy-font"><mark>2.	Quantitative or Numerical data </mark></p>
             <p class="use-noteworthy-font">
-              In marginal and conditional distribution we are always focused on one variable. But the table talks about 
-			relationship between these 2 variable. To summarise, table talks about frequency/count relationship
-			between these 2 variables.
+              Quantitative data is also known as numerical data which represents the numerical value (i.e., how much, 
+			how often, how many). Numerical data gives information about the quantities of a specific thing.
+              <br>
+              <br>Some examples of numerical data are height, length, size, weight, and so on. 
             </p>
-            <p class="use-noteworthy-font">
-              How we can plot this distribution? So far, we had one variable on x-axis and count on other axis.
-              To plot joint distribution lets put bot the variables on individual axis and count on third axis. Hence,
-              Joint distribution can be plotted as
+
+            <p>
+              <img src="../blogs_images/blog_0_numerical.png" alt="" class="img-fluid">
             </p>
-            <img src="../blogs_images/blog_1_joint_distribution.png" alt="" class="img-fluid">
+
+            <br>
 
 
 
-            <p class="use-noteworthy-font"><mark>3.a. Univariate Vs. Multivariate Distribution</mark></p>
-            <p class="use-noteworthy-font">
-              A univariate distribution refers to the distribution of a single random variable. On the other hand, a 
-			multivariate distribution refers to the probability distribution of a group of random variables. 
-            </p>
-            <img src="../blogs_images/blog_1_univsmul_distribution.png" alt="" class="img-fluid">
-
-
-            <p class="use-noteworthy-font"><mark>3.b. Parameters of Univariate and Multivariate Distribution </mark></p>
-            <p class="use-noteworthy-font">
-              If we want to describe the multivariate normal distribution we need the 			following three parameters:
-              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a) List of means returns of each variate
-              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b) List of variances of returns of each variate 
-              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c) List of correlations between each pair of variates.
-            </p>
-            <p class="use-noteworthy-font">
-              A univariate normal distribution is described using just the two variables namely mean and variance. For a 
-			multivariate distribution we need a third variable, i.e., the correlation between each pair of random variables. 
-			This is what distinguishes a multivariate distribution from a univariate distribution. If there are n random 
-			variables in the group, we will have n*(n-1)/2 pairs of correlations.
-            </p>
-
-
-            <p class="use-noteworthy-font"><mark>4. Multimodal distribution </mark></p>
-            <p class="use-noteworthy-font">
-              In statistics, a bimodal distribution is a probability distribution with two different modes, which may also be 
-              referred to as a bimodal distribution. These appear as distinct peaks (local maxima) in the probability 
-              density function, as shown in Figures:         
-            </p>
-            <img src="../blogs_images/blog_1_multimodal_distribution_1.png" alt="" class="img-fluid">
-            <p class="use-noteworthy-font">
-              Categorical, continuous, and discrete data can all form bimodal distributions. More generally, a multimodal distribution is a probability distribution with two or more modes.
-              as illustrated in Figure. The figure shows  A bivariate, multimodal distribution
-            </p>
-            <img src="../blogs_images/blog_1_multimodal_distribution_2.png" alt="" class="img-fluid">
-
-            <p class="use-noteworthy-font">
-              Interesting read:
-			      <br> <a href="https://www.kaggle.com/code/iamleonie/handling-multimodal-distributions-fe-techniques/notebook" >https://www.kaggle.com/code/iamleonie/handling-multimodal-distributions-fe-techniques/notebook </a>
-            </p>
-            <p class="use-noteworthy-font">
-            In your data any variable ( dependent or independent ) can follow multi-modal distribution. We can use
-              GMM in order to distinguish the mixtures. It is an unsupervised approach. 
-              First plot the distribution and see how many modes you can see. These number of modes will become
-              number of components for your Gaussian Mixture Model. For example in the below diagram for a 
-              variable there are 2 peaks hence n_components=2
-            </p>
-            <img src="../blogs_images/blog_1_gmm.png" alt="" class="img-fluid">
 
 
             <p class="use-noteworthy-font"><mark>References </mark></p>
             <p class="use-noteworthy-font">
-              <a href="https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/distributions-in-two-way-tables/v/marginal-distribution-and-conditional-distribution" >https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/distributions-in-two-way-tables/v/marginal-distribution-and-conditional-distribution </a>       
-              <br> <a href="https://en.wikipedia.org/wiki/Joint_probability_distribution" >https://en.wikipedia.org/wiki/Joint_probability_distribution </a>
-              <br> <a href="https://financetrain.com/univariate-vs-multivariate-distribution" >https://financetrain.com/univariate-vs-multivariate-distribution</a>
-              <br> <a href="https://en.wikipedia.org/wiki/Multimodal_distribution" >https://en.wikipedia.org/wiki/Multimodal_distribution</a>
+              <br> <a href="https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/" >https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/ </a>
+              <br> <a href="https://www.dummies.com/article/academics-the-arts/math/statistics/types-of-statistical-data-numerical-categorical-and-ordinal-169735/" >https://www.dummies.com/article/academics-the-arts/math/statistics/types-of-statistical-data-numerical-categorical-and-ordinal-169735/</a>
+              <br> <a href="https://byjus.com/maths/types-of-data-in-statistics/" >https://byjus.com/maths/types-of-data-in-statistics/</a>
+              <br> <a href="https://en.wikipedia.org/wiki/Ordinal_data" >https://en.wikipedia.org/wiki/Ordinal_data</a>
             </p>
             
 
