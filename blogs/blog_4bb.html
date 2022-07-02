@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta name="title" property="og:title" content="Math behind ordinary least square approximation">
+    <meta name="description" property="og:description" content="Math behind ordinary least square approximation">
+    <title>Math behind ordinary least square approximation</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Fundamentals of Linear Regression, Simple VS Multiple Linear Regression, Correlation coefficient , Residuals, Coefficient of determination, Ordinary least square">
+    <meta name="author" content="Dharmanath Patil">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../personal_css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../personal_css/animate.css">
+    
+    <link rel="stylesheet" href="../personal_css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../personal_css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../personal_css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../personal_css/aos.css">
+    <link rel="stylesheet" href="../personal_css/sec_cards.css">
+
+    <link rel="stylesheet" href="../personal_css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../personal_css/flaticon.css">
+    <link rel="stylesheet" href="../personal_css/icomoon.css">
+    <link rel="stylesheet" href="../personal_css/style.css">
+    <link rel="stylesheet" href="../personal_css/drop_down.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQCNW5KN0D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FQCNW5KN0D');
+    </script>
+    
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="https://dharmanathpatil.com/">DJ</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="https://dharmanathpatil.com" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="https://dharmanathpatil.com/blogs/index.html" class="nav-link"><span>Blogs</span></a></li>
+	          <li class="nav-item"><a class="nav-link"><span> Projects
+              <div class="dropdown-content">
+                <a href="https://dharmanathpatil.com/ec_projects">Ecommerce Projects</a>
+                <a href="https://dharmanathpatil.com/js_projects">Job-Sector Projects</a>
+                <a href="https://dharmanathpatil.com/re_projects">Real Estate Projects</a>
+                <a href="https://dharmanathpatil.com/en_projects">Engineering Projects</a>
+              </div>
+            </span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+    <section class="ftco-section", id="project-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10  ftco-animate">
+            <!-- <h2 class="mb-3"><strong>1. Attribute extraction</strong></h2> -->
+            <p class="use-noteworthy-font"><b>Math behind ordinary least square approximation</b></p>
+            <img src="../blogs_images/blog_4b_img.png" alt="" class="img-fluid">
+            <p class="use-noteworthy-font">
+                In this section we will derive the equations for slope and intercept which are used in ordinary square approximation.
+                <br>
+                <br>step 1:
+                <br>&emsp;&emsp;Let the data given be :  (X<sub>1</sub>, Y<sub>1</sub>), (X<sub>2</sub>,Y<sub>2</sub>),...(X<sub>n</sub>,Y<sub>n</sub>)
+                <br>&emsp;&emsp;We want to fit a linear line, let that line be: Y = MX + b
+                <br>
+                <br>step 2:
+                <br>&emsp;&emsp; We want to fit the line in such a way that sum of squared errors should be as low as possible
+                <br>&emsp;&emsp;sum of squared errors could be written as:
+                <br>&emsp;&emsp;SE<sub>LINE</sub>  = ( Y<sub>1</sub> - (MX<sub>1</sub> + b) )²  +  ( Y<sub>2</sub> - (MX<sub>2</sub> + b) )² + ......... +  ( Y<sub>n</sub> - (MX<sub>n</sub> + b) )²
+                <br>&emsp;&emsp;in this equation we have to find M and b that minimises SE<sub>LINE</sub> 
+                <br>
+                <br>step 3:
+                <br>&emsp;&emsp;Expanding above equation
+                <br>&emsp;&emsp;SE<sub>LINE</sub>  =   &emsp;( Y<sub>1</sub>² + (MX<sub>1</sub> + b)² - 2*Y<sub>1</sub>* (MX<sub>1</sub> + b) )  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>2</sub>²  + (MX<sub>2</sub> + b)²  - 2*Y<sub>2</sub>* (MX<sub>2</sub> + b) )  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>3</sub>²  + (MX<sub>3</sub> + b)²  - 2*Y<sub>3</sub>* (MX<sub>3</sub> + b) )  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ....... 
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>n</sub>² + (MX<sub>n</sub> + b)² - 2*Y<sub>n</sub>* (MX<sub>n</sub> + b) ) 
+                <br>
+                <br>&emsp;&emsp;Expanding again
+                <br>&emsp;&emsp;SE<sub>LINE</sub>  =   &emsp;( Y<sub>1</sub>² + MX<sub>1</sub>²  + b² + 2MX<sub>1</sub>b - 2Y<sub>1</sub>MX<sub>1</sub> -2Y<sub>1</sub>b )  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>2</sub>²  + MX<sub>2</sub>² + b² + 2MX<sub>2</sub>b  - 2Y<sub>2</sub>MX<sub>1</sub> -2Y<sub>2</sub>b)  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>3</sub>²  + MX<sub>3</sub>² + b² + 2MX<sub>3</sub>b  - 2Y<sub>3</sub>MX<sub>1</sub> -2Y<sub>3</sub>b)  
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ....... 
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ ( Y<sub>n</sub>² + MX<sub>n</sub>² + b² + 2MX<sub>n</sub>b - 2Y<sub>n</sub>MX<sub>1</sub> -2Y<sub>n</sub>b)  
+                <br>
+                <br>step 4:
+                <br>&emsp;&emsp;Rewriting the above equation
+                <br>&emsp;&emsp;SE<sub>LINE</sub>  =   &emsp;( Y<sub>1</sub>²  +  Y<sub>2</sub>²  +  Y<sub>3</sub>²  +..........+  Y<sub>n</sub>²   )   +   M² ( X<sub>1</sub>²  +  X<sub>2</sub>²  +  X<sub>3</sub>²  +..........+  X<sub>n</sub>² )  +  nb² 
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+  2Mb (X<sub>1</sub>  +  X<sub>2</sub>  +  X<sub>3</sub>  +..........+  X<sub>n</sub>)  -  2M (X<sub>1</sub>Y<sub>1</sub>  +  X<sub>2</sub>Y<sub>2</sub>  +  X<sub>3</sub>Y<sub>3</sub>  +..........+  X<sub>n</sub>Y<sub>n</sub>) 
+                <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-  2b ( Y<sub>1</sub>  +  Y<sub>2</sub>  +  Y<sub>3</sub>  +..........+  Y<sub>n</sub>   )    
+                <br>
+                <br>step 5:
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4b_7.png" alt="" class="img-fluid">
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;Hence substituting similar equations on above:
+              <br>
+              <br>&emsp;&emsp;SE<sub>LINE</sub>  =  &emsp;n<span class="overlineme">Y²</span> &emsp;+&emsp; M²n<span class="overlineme">X²</span> + &emsp;nb² &emsp;+ &emsp;2Mbn<span class="overlineme">X</span>
+              &emsp;-&emsp;2Mn<span class="overlineme">XY</span>&emsp;-&emsp;2bn<span class="overlineme">Y</span>&emsp;
+            </p>
+            <p class="use-noteworthy-font">
+              <br>step 6:
+              <br>&emsp;&emsp;- So now we have simplified the equation which we want to minimise
+              <br>&emsp;&emsp;- If we observe the above equation carefully, for given input and actual all 
+              <br>&emsp;&emsp;&emsp;the parameters are constants except M and b
+              <br>&emsp;&emsp;- So for different M and b we will have different Sum of Squared Errors
+              <br>&emsp;&emsp;- If we do lot of observations on different M and b the graph looks like this:
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4b_8.png" alt="" class="img-fluid">
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;- From the above graph it is clear that Sum of squared error is minimum where we have marked star
+              <br>&emsp;&emsp;- This coordinate is present at that point where slope with respect M and slope with respect to b is zero.
+              <br>&emsp;&emsp;- Hence, we can use partial derivative to obtain this point 
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; d(SE<sub>LINE</sub>)/dM = 0 &emsp;&emsp; d(SE<sub>LINE</sub>)/db = 0
+              <br>&emsp;&emsp;- partial derivatives are used to find the slope and by assigning 0 we will know that at these points
+              <br>&emsp;&emsp;&emsp;slope is minimum
+              <br>
+              <br>step 7:
+              <br>&emsp;&emsp; Let's solve for d(SE<sub>LINE</sub>)/dM = 0
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  d(n<span class="overlineme">Y²</span> &emsp;+&emsp; M²n<span class="overlineme">X²</span> + &emsp;nb² &emsp;+ &emsp;2Mbn<span class="overlineme">X</span>
+              &emsp;-&emsp;2Mn<span class="overlineme">XY</span>&emsp;-&emsp;2bn<span class="overlineme">Y</span>) /dM = 0
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2 n <span class="overlineme">X²</span>  M)   +    (2 b n <span class="overlineme">X</span>)  -   ( 2 n <span class="overlineme">XY</span> )    =   0 
+              <br>
+              <br>&emsp;&emsp; Let's solve for d(SE<sub>LINE</sub>)/db = 0
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  d(n<span class="overlineme">Y²</span> &emsp;+&emsp; M²n<span class="overlineme">X²</span> + &emsp;nb² &emsp;+ &emsp;2Mbn<span class="overlineme">X</span>
+              &emsp;-&emsp;2Mn<span class="overlineme">XY</span>&emsp;-&emsp;2bn<span class="overlineme">Y</span>) /db = 0
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2 n b)   +    (2 M n <span class="overlineme">X</span>)  -   ( 2 n <span class="overlineme">Y</span> )    =   0 
+              <br>
+              <br>step 8:
+              <br>&emsp;&emsp; We have 2 equations from above. Those are:
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2 n <span class="overlineme">X²</span>  M)   +    (2 b n <span class="overlineme">X</span>)  -   ( 2 n <span class="overlineme">XY</span> )    =   0 
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2 n b)   +    (2 M n <span class="overlineme">X</span>)  -   ( 2 n <span class="overlineme">Y</span> )    =   0 
+              <br>
+              <br>&emsp;&emsp; Dividing these 2 equations with "2n"
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="overlineme">X²</span>  M &emsp;+&emsp; b <span class="overlineme">X</span>&emsp;-&emsp;<span class="overlineme">XY</span> = 0 &emsp;................... (eq 1)
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; b &emsp;+&emsp; M <span class="overlineme">X</span>&emsp;-&emsp;<span class="overlineme">Y</span> = 0 &emsp;................... (eq 2)
+              <br>
+              <br>step 9:
+              <br>&emsp;&emsp;If we substitute second equation in first we will get:		 
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4b_9.png" alt="" class="img-fluid">
+            </p>
+            <p class="use-noteworthy-font">
+              Note: we can rewrite both of these equations in Y = MX + b format and can say that any regression line that better fits data points should have to go through  
+              ( µ<sub>x</sub>  , µ<sub>y</sub>  )
+            </p>
+
+
+
+            
+
+            
+          </div> <!-- Project - 1 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <section class="ftco-section", id="coming">
+
+
+
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../personal_js/jquery.min.js"></script>
+  <script src="../personal_js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../personal_js/popper.min.js"></script>
+  <script src="../personal_js/bootstrap.min.js"></script>
+  <script src="../personal_js/jquery.easing.1.3.js"></script>
+  <script src="../personal_js/jquery.waypoints.min.js"></script>
+  <script src="../personal_js/jquery.stellar.min.js"></script>
+  <script src="../personal_js/owl.carousel.min.js"></script>
+  <script src="../personal_js/jquery.magnific-popup.min.js"></script>
+  <script src="../personal_js/aos.js"></script>
+  <script src="../personal_js/jquery.animateNumber.min.js"></script>
+  <script src="../personal_js/scrollax.min.js"></script>
+
+  <script src="../personal_js/main.js"></script>
+
+  <script>
+    var viewMode = getCookie("view-mode");
+    if(viewMode == "desktop"){
+        viewport.setAttribute('content', 'width=1024');
+    }else if (viewMode == "mobile"){
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    }
+  </script>
+
+  </body>
+</html>

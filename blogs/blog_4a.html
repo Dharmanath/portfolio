@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta name="title" property="og:title" content="Fundamentals of Linear Regression">
+    <meta name="description" property="og:description" content="Fundamentals of Linear Regression">
+    <title>Fundamentals of Linear Regression</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Fundamentals of Linear Regression, Simple VS Multiple Linear Regression, Correlation coefficient , Residuals, Coefficient of determination">
+    <meta name="author" content="Dharmanath Patil">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../personal_css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../personal_css/animate.css">
+    
+    <link rel="stylesheet" href="../personal_css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../personal_css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../personal_css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../personal_css/aos.css">
+    <link rel="stylesheet" href="../personal_css/sec_cards.css">
+
+    <link rel="stylesheet" href="../personal_css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../personal_css/flaticon.css">
+    <link rel="stylesheet" href="../personal_css/icomoon.css">
+    <link rel="stylesheet" href="../personal_css/style.css">
+    <link rel="stylesheet" href="../personal_css/drop_down.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQCNW5KN0D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FQCNW5KN0D');
+    </script>
+    
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="https://dharmanathpatil.com/">DJ</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" class="navbar">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="https://dharmanathpatil.com" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="https://dharmanathpatil.com/blogs/index.html" class="nav-link"><span>Blogs</span></a></li>
+	          <li class="nav-item"><a class="nav-link"><span> Projects
+              <div class="dropdown-content">
+                <a href="https://dharmanathpatil.com/ec_projects">Ecommerce Projects</a>
+                <a href="https://dharmanathpatil.com/js_projects">Job-Sector Projects</a>
+                <a href="https://dharmanathpatil.com/re_projects">Real Estate Projects</a>
+                <a href="https://dharmanathpatil.com/en_projects">Engineering Projects</a>
+              </div>
+            </span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+    <section class="ftco-section", id="project-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10  ftco-animate">
+            <!-- <h2 class="mb-3"><strong>1. Attribute extraction</strong></h2> -->
+            <p class="use-noteworthy-font"><b>Being in relationship with linear equations</b></p>
+            <p>
+              <img src="../blogs_images/blog_4a_img.png" alt="" class="img-fluid">
+            </p>
+       
+            <p class="use-noteworthy-font">
+              In this section we will be covering following things:
+              <br>&emsp;&emsp;&emsp;&emsp;1. Regression in linear equations
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a. Simple Linear Regression
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. Multiple Linear Regression
+              <br>&emsp;&emsp;&emsp;&emsp;2. Correlation coefficient 
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a. Equation of correlation coefficient
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. Example problem on correlation coefficient
+              <br>&emsp;&emsp;&emsp;&emsp;3. Residuals
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a. Intuition behind residual
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. Example problem on residual
+              <br>&emsp;&emsp;&emsp;&emsp;4. Coefficient of determination
+            </p>
+
+
+            <br><p class="use-noteworthy-font"><mark>1.	 Regression in linear equations</mark></p>
+            <p class="use-noteworthy-font">
+              IRegression is a statistical method used in finance, investing, and other disciplines that attempts to 
+              determine the relationship between one dependent variable (usually denoted by Y) and a series of other 
+              variables (known as independent variables).	
+              <br>
+              <br>The two basic types of regression are simple linear regression and multiple linear regression, although 
+              there are non-linear regression methods for more complicated data and analysis. 
+              <br>
+              <br>a. Simple linear regression
+              <br>&emsp;&emsp;&emsp;Simple linear regression has only one x and one y variable i.e one dependent variable and 
+              <br>&emsp;&emsp;&emsp;one independent variable.  For instance, when we predict rent based on square feet alone 
+              <br>&emsp;&emsp;&emsp;that is simple linear regression.
+
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_1a.png" alt="" class="img-fluid" style="height: 10%; width: 30%;">
+            </p>
+        
+            <p class="use-noteworthy-font">
+              <br>b. Multiple Linear regression
+              <br>&emsp;&emsp;&emsp;Multiple linear regression has one y and  two or more x variables  i.e one independent 
+              <br>&emsp;&emsp;&emsp;variable and  two or more dependent variables. For instance, When we predict rent based on 
+              <br>&emsp;&emsp;&emsp;square feet and age of the building that is an example of multiple linear regression.
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_1b.png" alt="" class="img-fluid" style="height: 10%; width: 30%;">
+            </p>
+
+            <br><p class="use-noteworthy-font"><mark>2. Correlation coefficient </mark></p>
+            <p class="use-noteworthy-font">
+              *	The correlation coefficient is a number calculated from given data that measures the strength and 
+              <br>&emsp;direction of the linear relationship between two variables: x and y.
+              <br>*	The sign of the linear correlation coefficient indicates the direction of the linear relationship 
+              between x and y.
+              <br>*	When r (the correlation coefficient) is near 1 or −1, the linear relationship is strong; when it 
+              is near 0,  the <br>&emsp;linear relationship is weak.
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_2a.png" alt="" class="img-fluid" >
+            </p>
+
+            <p class="use-noteworthy-font">
+              A univariate normal distribution is described using just the two variables namely mean and variance. For a 
+              multivariate distribution we need a third variable, i.e., the correlation between each pair 
+              of random variables. 
+
+              <br>
+              <br><u>a. Equation of correlation coefficient</u>
+              <br>&emsp;&emsp;&emsp;The strength of the linear association between two variables is quantified by the correlation coefficient.
+              <br>&emsp;&emsp;&emsp;Given a set of observations (X<sub>1</sub>, Y<sub>1</sub>), (X<sub>2</sub>,Y<sub>2</sub>),...(X<sub>n</sub>,Y<sub>n</sub>), the formula for computing the correlation 
+              <br>&emsp;&emsp;&emsp;coefficient is given by
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_2a1.png" alt="" class="img-fluid" >
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;&emsp;where Sx and Sy stands for standard deviation for variable x and y respectively.
+              <br>
+              <br>&emsp;&emsp;&emsp;From the above formula we can see that it somehow looks like a z score. We can write 
+              <br>&emsp;&emsp;&emsp;the same equation as follows:
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_2a2.png" alt="" class="img-fluid" >
+            </p>
+
+
+            <p class="use-noteworthy-font">
+              <br><u>b. Example problem on correlation coefficient</u>
+              <br>&emsp;&emsp;&emsp;Problem: Given following data points which consist of 2 variables x and y find the correlation coeff.
+              <br>&emsp;&emsp;&emsp;(X,Y)
+              <br>&emsp;&emsp;&emsp;( 1, 1)
+              <br>&emsp;&emsp;&emsp;( 2, 2)
+              <br>&emsp;&emsp;&emsp;( 2, 3)
+              <br>&emsp;&emsp;&emsp;( 3, 6)
+
+              <br>&emsp;&emsp;&emsp;Solution:
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The dataset has 2 dimension or 2 variables, Those are x and y
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;x = [ 1, 2, 2, 3]
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Mean can be calculated as:   X̅   = ( 1+2+2+3 ) / 4 = 2
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Standard deviation: S<sub>x</sub> = 0.816
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;y = [ 1, 2, 3, 6]
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Mean can be calculated as Ȳ = ( 1+2+3+6 ) / 4 = 3
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Standard deviation: S<sub>y</sub> = 2.16
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_2a1.png" alt="" class="img-fluid" >
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Hence r = &emsp;[ ( X <sub>1</sub> -  X̅  ) / S<sub>x</sub> &emsp;*&emsp; ( Y <sub>1</sub> -  Ȳ  ) / S<sub>y</sub>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( X <sub>2</sub> -  X̅  ) / S<sub>x</sub> &emsp;*&emsp; ( Y <sub>2</sub> -  Ȳ  ) / S<sub>y</sub>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( X <sub>3</sub> -  X̅  ) / S<sub>x</sub> &emsp;*&emsp; ( Y <sub>3</sub> -  Ȳ  ) / S<sub>y</sub>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( X <sub>4</sub> -  X̅  ) / S<sub>x</sub> &emsp;*&emsp; ( Y <sub>4</sub> -  Ȳ  ) / S<sub>y</sub>] / n-1
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Hence r = &emsp;[ ( 1 -  2 ) / 0.816 &emsp;*&emsp; ( 1 -  3  ) / 2.16
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( 2 -  2  ) / 0.816 &emsp;*&emsp; ( 2 -  3  ) / 2.16
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( 2 -  2  ) / 0.816 &emsp;*&emsp; ( 3 -  3  ) / 2.16
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; + ( 3 -  2  ) / 0.816 &emsp;*&emsp; ( 6 -  3  ) / 2.16] / 4-1
+            </p>
+            <p class="use-noteworthy-font">
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;r = 0.946
+            </p>
+
+            <br><p class="use-noteworthy-font"><mark>3. Residuals </mark></p>
+            <p class="use-noteworthy-font">
+              <br><u>a. Intuition: Residual is difference between actual and predicted. </u>
+                <br>&emsp;&emsp;&emsp;residual = Σ (actual - predicted )
+                <br>&emsp;&emsp;&emsp;sum of residual squares = Σ (actual - predicted )^2
+                <br>
+                <br>&emsp;&emsp;&emsp;When we are trying to find the line that best fits our data set we are trying to reduce the residuals
+                <br>&emsp;&emsp;&emsp;or we can also use sum of residuals for the minimisation task.
+            </p>
+            <p style="text-align:center">
+              <img src="../blogs_images/blog_4a_2a3.png" alt="" class="img-fluid" >
+            </p>
+            <p class="use-noteworthy-font">
+              <br><u>b. Example problem on redidual</u>
+              <br>&emsp;&emsp;&emsp;Problem: Vera rents bicycles to tourists. She records the height (in cm) of each customer 
+              <br>&emsp;&emsp;&emsp;and the frame size (in cm) of the bicycle that customer rented.
+              <br>&emsp;&emsp;&emsp;After plotting her results, Vera noticed that the relationship between the 2 variables was fairly linear,
+              <br>&emsp;&emsp;&emsp;so she used the data to calculate the following least square regression equation for predicting the 
+              <br>&emsp;&emsp;&emsp;bicycle frame size from the height of the customer:
+              <br>&emsp;&emsp;&emsp;y = 0.33 + 0.33 x
+              <br>&emsp;&emsp;&emsp;What is the residual of a customer with a height of 155 cm who rents a bike with 51 cm frame ?
+              <br>
+              <br>&emsp;&emsp;&emsp;Solution:
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  actual frame size = 51 cm
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    predicted frame size:
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; y = 0.33 + 0.33 x
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= 0.33 + 0.33*155
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;predicted = 51.48 cm
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; residual =  actual - predicted
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=  51 - 51.48
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= -0.48 cm
+              <br>
+              <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Hence the residual is -0.48 cm
+            </p>
+
+
+            <br><p class="use-noteworthy-font"><mark>4. Coefficient of determination </mark></p>
+            <p class="use-noteworthy-font">
+              The coefficient of determination is a measurement used to explain how much variability of one factor can 
+              be caused by its relationship to another related factor. This correlation, known as the "goodness of fit," 
+              is represented as a value between 0.0 and 1.0.
+              <br>
+              <br>In statistics, the coefficient of determination, denoted R² or r² and pronounced "R squared", is the 
+              proportion of the variation in the dependent variable that is predictable from the independent variable.
+              <br>
+              <br>Given X and Y where Y is dependent variable and X is dependent variable. Ȳ represents the mean of Y
+			            and X̅  represents the mean of X 
+              <br>
+              <br>- Total variation in Y can be defined as Squared Error from Average Ȳ
+              <br>&emsp;&emsp;SE<sub>y</sub> = ( Y<sub>1</sub> - Ȳ )²   +  ( Y<sub>2</sub> - Ȳ )²   + ..................... + ( Y<sub>n</sub> - Ȳ )² 
+              <br>
+              <br>- Variation that is NOT predictable from independent variable can be defined as:
+              <br>&emsp;&emsp;SE<sub>LINE</sub> =  ( Y<sub>1</sub>-(mX<sub>1</sub> +b) )²   +  ( Y<sub>2</sub>-(mX<sub>2</sub> +b) )²    +  ............. + ( Y<sub>n</sub> -(mX<sub>n</sub> +b) ) ² 
+              <br>
+              <br>- Proportion of Variation that is NOT predictable from independent variable can be defined as:
+              <br>&emsp;&emsp;SE<sub>LINE</sub>/SE<sub>y</sub> 
+              <br>
+              <br>- Proportion of variance that is predictable from independent variable ( r² ) is
+              <br>&emsp;&emsp;&emsp;= 1 - Proportion of Variation that is NOT predictable from independent variable
+              <br>&emsp;&emsp;&emsp;= 1 - (SE<sub>LINE</sub>/SE<sub>y</sub> ) 
+              <br>&emsp;&emsp;r² =  1 - (SE<sub>LINE</sub>/SE<sub>y</sub> ) 
+              <br>
+              <br>Correlations are good for identifying patterns in data, but almost meaningless for quantifying a model’s 
+              performance, especially for complex models (like machine learning models). This is because correlations 
+              only tell if two things follow each other (e.g., parking lot occupancy and Walmart’s stock), but don’t tell 
+              how they match each other (e.g., predicted and actual stock price).
+        
+            </p>
+            
+
+            
+          </div> <!-- Project - 1 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <section class="ftco-section", id="coming">
+
+
+
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../personal_js/jquery.min.js"></script>
+  <script src="../personal_js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../personal_js/popper.min.js"></script>
+  <script src="../personal_js/bootstrap.min.js"></script>
+  <script src="../personal_js/jquery.easing.1.3.js"></script>
+  <script src="../personal_js/jquery.waypoints.min.js"></script>
+  <script src="../personal_js/jquery.stellar.min.js"></script>
+  <script src="../personal_js/owl.carousel.min.js"></script>
+  <script src="../personal_js/jquery.magnific-popup.min.js"></script>
+  <script src="../personal_js/aos.js"></script>
+  <script src="../personal_js/jquery.animateNumber.min.js"></script>
+  <script src="../personal_js/scrollax.min.js"></script>
+
+  <script src="../personal_js/main.js"></script>
+
+  <script>
+    var viewMode = getCookie("view-mode");
+    if(viewMode == "desktop"){
+        viewport.setAttribute('content', 'width=1024');
+    }else if (viewMode == "mobile"){
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    }
+  </script>
+
+  </body>
+</html>

@@ -76,6 +76,8 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
+
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -369,6 +371,12 @@ mark,
   display: inline-block; }
   .list-inline-item:not(:last-child) {
     margin-right: 0.5rem; }
+
+.overlineme {
+  text-decoration: overline;
+  text-decoration-color: #31466D;
+  text-underline-offset: -2px;
+}
 
 .initialism {
   font-size: 90%;
