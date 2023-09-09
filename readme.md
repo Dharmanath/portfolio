@@ -44,7 +44,7 @@ sudo systemctl stop portfolio
 
 
 
-You might need to install nginx manually after installing nginx.
+You might need to install nginx manually using sudo yum install nginx after installing nginx.
 1. if directories are not present then create
 ```
 mkdir -p /etc/nginx/sites-enabled
