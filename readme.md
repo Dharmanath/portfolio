@@ -92,14 +92,25 @@ https://www.youtube.com/watch?v=hRSj2n-XKGM
 Added thid video copy to repo also for future reference. Make sure to assign right security group to open the port to universe
 
 Configuring https:
-Install certbot 
+Install certbot using one of the method below
 ```
+option 1
 sudo yum install certbot-apache
 sudo yum install certbot
 sudo amazon-linux-extras install epel
 sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum install python-certbot-nginx
 sudo certbot certonly --nginx
+
+
+option 2 - by creating dedicated venv
+pip install virtualenv
+virtualenv ~/.certbot
+source ~/.certbot/bin/activate
+pip install 'setuptools<41'
+pip install certbot
+pip install 'parsedatetime<2.6'
+sudo certbot certonly 
 ```
 Make sure port 443 is open
 
