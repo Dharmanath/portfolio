@@ -88,7 +88,7 @@ sudo systemctl stop nginx
 TO configure AWS for nameserver
 https://www.youtube.com/watch?v=hRSj2n-XKGM
 
-Added thid video copy to repo also for future reference
+Added thid video copy to repo also for future reference. Make sure to assign right security group to open the port to universe
 
 Configuring https:
 Install certbot 
