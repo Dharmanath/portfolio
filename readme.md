@@ -72,6 +72,7 @@ server {
     }
 }
 ```
+ if default user is nginx then change it to root first line
 
 4. Start nginx
 ```
