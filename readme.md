@@ -110,7 +110,7 @@ source ~/.certbot/bin/activate
 pip install 'setuptools<41'
 pip install certbot
 pip install 'parsedatetime<2.6'
-sudo certbot certonly 
+sudo .certbotenv/bin/certbot certonly
 ```
 Make sure port 443 is open
 
